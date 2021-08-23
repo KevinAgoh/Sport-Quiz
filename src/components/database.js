@@ -1,4 +1,4 @@
-const players = [
+export const players = [
   {
     picture: "https://www.basketball-reference.com/req/202106291/images/players/jordami01.jpg",
     name: "Michael Jordan",
@@ -60,6 +60,13 @@ const players = [
     name: "Dominique Wilkins",
     team: "Atlanta Hawks",
     height: "2,03cm",
+    position: "Small Forward"
+  },
+  {
+    picture: "https://www.basketball-reference.com/req/202106291/images/players/havlijo01.jpg",
+    name: "John Havlicek",
+    team: "Boston Celtics",
+    height: "1,96cm",
     position: "Small Forward"
   }
 ]
