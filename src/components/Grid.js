@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Card from './Card';
 
-function Grid() {
+export default function Grid() {
   return (
     <div>
-      
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   )
 }
-
-export default Grid

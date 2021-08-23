@@ -1,0 +1,7 @@
+.player-card {
+  height: 180px;
+  width: 350px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+}
