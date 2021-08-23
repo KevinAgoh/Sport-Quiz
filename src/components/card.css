@@ -1,6 +1,6 @@
 .player-card {
-  height: 180px;
-  width: 350px;
+  height: 210px;
+  width: 300px;
   border: 2px solid black;
   display: flex;
   justify-content: space-around;

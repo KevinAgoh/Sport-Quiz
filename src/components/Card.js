@@ -9,6 +9,7 @@ export default function Card() {
         <h3>Michael Jordan</h3>
         <p>Chicago Bulls</p>
         <p>1,98m</p>
+        <p>Shooting Guard</p>
         <button>Show player name</button>
       </div>
     </div>
