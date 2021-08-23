@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import './grid.css';
+import '../database';
 
 export default function Grid() {
   return (
