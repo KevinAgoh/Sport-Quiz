@@ -1,7 +1,19 @@
 .parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.next-player-button {
+  background-color: #1a4aa1;
+  height: auto;
+  width: auto;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid #df0e30;
+}
+
+.next-player-button:hover {
+  background-color: #df0e30;
+  border: 2px solid #1a4aa1;
+  padding: 5px 10px;
 }

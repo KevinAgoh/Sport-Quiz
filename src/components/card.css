@@ -1,8 +1,15 @@
 .player-card {
   height: 250px;
-  width: 350px;
+  width: 400px;
   border: 2px solid #2f4858;
-  border-radius: 2px;
+  border-radius: 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.player-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
