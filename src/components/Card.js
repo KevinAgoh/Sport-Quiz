@@ -23,8 +23,9 @@ export default function Card(props) {
             setShowInfos(!showInfos);
           }}
           type="button" 
-          className="btn btn-primary"
-        >Show player name</button>
+          className="btn btn-primary">
+          Show player name
+        </button>
       </div>
     </div>
   );

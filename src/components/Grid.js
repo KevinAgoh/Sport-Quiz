@@ -11,8 +11,27 @@ export default function Grid() {
     setCurrentPlayer(currentPlayer + 1);
   };
 
+  const playAudio = () => {
+    let swish = new Audio("/swish.mp3");
+    const playPromise = swish.play();
+    if (playPromise !== undefined) {
+        playPromise
+          .then(_ => {
+            // Automatic playback started!
+            // Show playing UI.
+            console.log("audio played auto");
+          })
+          .catch(error => {
+            // Auto-play was prevented
+            // Show paused UI.
+            console.log("playback prevented");
+          });
+      }
+  };
+
   return (
     <>
+      <h3>Try to guess the player's name 😀</h3>
       <div className="parent">
           <Card
             picture={players[currentPlayer].picture}
@@ -23,7 +42,14 @@ export default function Grid() {
           />
       </div>
       <div className="next-player d-flex justify-content-center">
-        <button className="next-player-button mt-5" onClick={handleNextPlayer}>Next player</button>
+        <button 
+          className="next-player-button mt-5" 
+          onClick={() => {
+            handleNextPlayer();
+            playAudio();
+          }}>
+            Next player
+        </button>
       </div>
     </>
   )
