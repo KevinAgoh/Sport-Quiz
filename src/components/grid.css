@@ -5,16 +5,18 @@
 
 .next-player-button {
   background-color: #1a4aa1;
-  height: auto;
+  height: 50px;
   width: auto;
   color: white;
-  border-radius: 5px;
-  border: 2px solid #df0e30;
+  border-radius: 10px;
+  border: 3px solid #df0e30;
+  padding: 5px 10px;
+  align-self: center;
 }
 
 .next-player-button:hover {
   background-color: #df0e30;
-  border: 2px solid #1a4aa1;
+  border: 3px solid #1a4aa1;
   padding: 5px 10px;
 }
 

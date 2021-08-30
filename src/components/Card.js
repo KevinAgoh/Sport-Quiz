@@ -18,15 +18,15 @@ export default function Card(props) {
             <p>{props.position}</p>
           </>
         }
-        <button 
-          onClick={() => {
-            setShowInfos(!showInfos);
-          }}
-          type="button" 
-          className="btn btn-primary">
-          Show player name
-        </button>
       </div>
+      <button 
+        onClick={() => {
+          setShowInfos(!showInfos);
+        }}
+        type="button" 
+        className="disclose-button">
+        Show player name
+      </button>
     </div>
   );
 }
