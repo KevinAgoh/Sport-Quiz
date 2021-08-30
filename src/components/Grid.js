@@ -1,15 +1,21 @@
 import React, {useState} from 'react';
-import Card from './Card';
 import './grid.css';
+import './card.css';
 import {players} from './database.js';
 
 export default function Grid() {
 
   const [currentPlayer, setCurrentPlayer] = useState(0);
+  let [showInfos, setShowInfos] = useState(false);
 
   const handleNextPlayer = () => {
     setCurrentPlayer(currentPlayer + 1);
+    setShowInfos(showInfos = false);
   };
+
+  const handleShowInfo = () => {
+    setShowInfos(showInfos = true);
+  }
 
   const playAudio = () => {
     let swish = new Audio("/swish.mp3");
@@ -33,13 +39,27 @@ export default function Grid() {
     <>
       <h3>Try to guess the player's name 😀</h3>
       <div className="parent">
-          <Card
-            picture={players[currentPlayer].picture}
-            name={players[currentPlayer].name}
-            team={players[currentPlayer].team}
-            height={players[currentPlayer].height}
-            position={players[currentPlayer].position}
-          />
+        <div className="player-card mt-5">
+          <img src={players[currentPlayer].picture} alt="" /> 
+          <div className="player-details">
+            {showInfos &&
+              <>
+                <h3>{players[currentPlayer].name}</h3>
+                <p>{players[currentPlayer].team}</p>
+                <p>{players[currentPlayer].height}</p>
+                <p>{players[currentPlayer].position}</p>
+              </>
+            }
+          </div>
+          <button 
+            onClick={() => {
+              handleShowInfo();
+            }}
+            type="button"
+            className="disclose-button">
+            Show player name
+          </button>
+        </div>
       </div>
       <div className="next-player d-flex justify-content-center">
         <button 
