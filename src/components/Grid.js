@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import './grid.css';
-import './card.css';
+import './grid.scss';
+import './card.scss';
 import {players} from './database.js';
 
 export default function Grid() {
@@ -9,8 +9,15 @@ export default function Grid() {
   let [showInfos, setShowInfos] = useState(false);
 
   const handleNextPlayer = () => {
-    setCurrentPlayer(currentPlayer + 1);
-    setShowInfos(showInfos = false);
+
+    const nextPlayer = currentPlayer + 1;
+
+    if (nextPlayer < players.length) {
+      setCurrentPlayer(currentPlayer + 1);
+      setShowInfos(showInfos = false);
+    } else {
+      alert("You have reached the end of the quiz !");
+    }
   };
 
   const handleShowInfo = () => {
