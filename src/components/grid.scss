@@ -1,6 +1,47 @@
+@import "./../App.scss";
+
 .parent {
   display: flex;
   justify-content: center;
+}
+
+.player-card {
+  height: 250px;
+  width: 700px;
+  border: 2px solid #df0e30;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+    height: 700px;
+    width: 250px;
+  }
+}
+
+.player-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.disclose-button {
+  background-color: #1a4aa1;
+  height: 50px;
+  width: auto;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid #df0e30;
+  padding: 5px 10px;
+  align-self: center;
+}
+
+.disclose-button:hover {
+  background-color: #df0e30;
+  border: 3px solid #1a4aa1;
+  padding: 5px 10px;
 }
 
 .next-player-button {

@@ -1,3 +1,11 @@
-$width: body {
+$width: 600px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+body {
   background-color: #daf7dc;
 }

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import './grid.scss';
-import './card.scss';
 import {players} from './database.js';
+import './grid.scss';
 
 export default function Grid() {
 
