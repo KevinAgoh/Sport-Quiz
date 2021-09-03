@@ -45,11 +45,24 @@ export default function Grid() {
       }
   };
 
+  const addFlip = () => {
+    const card = document.querySelector('.player-card');
+    card.classList.add('flip-in-ver-right');
+  }
+
+  const removeFlip = () => {
+    const card = document.querySelector('.player-card');
+    card.classList.remove('flip-in-ver-right');
+  }
+
   return (
     <>
       <h3>Try to guess the player's name 😀</h3>
       <div className="parent">
-        <div data-aos="fade-in">
+        <div data-aos="zoom-in"
+             data-aos-duration="1000"
+             data-aos-easing="ease-in-out"
+        >
           <div className="player-card mt-5">
             <img src={players[currentPlayer].picture} alt="" /> 
             <div className="player-details">
@@ -65,6 +78,7 @@ export default function Grid() {
             <button 
               onClick={() => {
                 handleShowInfo();
+                removeFlip();
               }}
               type="button"
               className="disclose-button">
@@ -77,7 +91,7 @@ export default function Grid() {
               onClick={() => {
                 handleNextPlayer();
                 playAudio();
-                AOS.init();
+                addFlip();
               }}>
                 Next player
             </button>
