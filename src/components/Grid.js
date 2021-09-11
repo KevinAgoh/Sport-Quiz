@@ -55,6 +55,21 @@ export default function Grid() {
     card.classList.remove('flip-in-ver-right');
   }
 
+  const axios = require('axios');
+  // Make a request for a user with a given ID
+  axios.get('https://www.balldontlie.io/api/v1/players?page=3?per_page=100')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
   return (
     <>
       <h3>Try to guess the player's name 😀</h3>
